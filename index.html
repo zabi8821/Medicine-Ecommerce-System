@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedStore | Secure Pharmacy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- MODERN CSS STYLING --- */
+        :root {
+            --primary: #00b894; /* Medical Green */
+            --dark: #2d3436;
+            --light: #f5f6fa;
+            --shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+
+        /* Header */
+        header {
+            background: white;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: var(--primary); }
+
+        .btn-login {
+            background: var(--dark);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            transition: transform 0.2s;
+        }
+        
+        .btn-login:hover { transform: scale(1.05); }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+            border-radius: 0 0 50% 50% / 40px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .btn-cta {
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s;
+        }
+
+        .btn-cta:hover { transform: translateY(-3px); }
+
+        /* Products Grid */
+        .container {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            text-align: center;
+            padding-bottom: 1.5rem;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-img {
+            height: 180px;
+            background: #dfe6e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b2bec3;
+            font-size: 3rem;
+        }
+
+        .card h3 { margin: 1rem 0 0.5rem; }
+        .price { color: var(--primary); font-weight: bold; font-size: 1.2rem; }
+
+        .btn-add {
+            background: var(--dark);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+        .btn-add:hover { background: var(--primary); }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background: var(--dark);
+            color: white;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">💊 MedStore</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Upload Rx</a>
+            <a href="#">Track Order</a>
+            <a href="#" class="btn-login">Sign In</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Healthcare, Delivered.</h1>
+        <p>Order genuine medicines online with 100% secure prescription verification.</p>
+        <button class="btn-cta">Start Shopping</button>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">Best Selling Medicines</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-img">💊</div>
+                <h3>Panadol Extra</h3>
+                <p class="price">$4.50</p>
+                <button class="btn-add">Add to Cart</button>
+            </div>
+            <div class="card">
+                <div class="card-img">💉</div>
+                <h3>Insulin Pen</h3>
+                <p class="price">$45.00</p>
+                <button class="btn-add">Add to Cart</button>
+            </div>
+            <div class="card">
+                <div class="card-img">🧴</div>
+                <h3>Derma Care</h3>
+                <p class="price">$12.99</p>
+                <button class="btn-add">Add to Cart</button>
+            </div>
+            <div class="card">
+                <div class="card-img">🩺</div>
+                <h3>Digital Thermometer</h3>
+                <p class="price">$25.00</p>
+                <button class="btn-add">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Medicine E-Commerce Research Project.</p>
+        <p style="opacity: 0.6; font-size: 0.9rem;">Designed for Final Year Project Submission</p>
+    </footer>
+
+</body>
+</html>
